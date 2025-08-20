@@ -1,48 +1,73 @@
-:root {
-  --fundo-claro: #ffffff;
-  --texto-escuro: #000000;
-  --fundo-escuro: #000000;
-  --texto-claro: #ffffff;
-  --laranja: #FF862A;
-  --link: #ffd700;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site F1 - Acessibilidade</title>
 
-body {
-  background-color: var(--fundo-claro);
-  color: var(--texto-escuro);
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  transition: background 0.3s, color 0.3s;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lemon&display=swap" rel="stylesheet">
 
-/* Tema escuro */
-body.tema-escuro {
-  background-color: var(--fundo-escuro);
-  color: var(--texto-claro);
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-header, footer {
-  padding: 1rem;
-  text-align: center;
-}
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <!-- Botão de tema -->
+  <button id="alternar-tema" class="tema-botao">🌙 Modo Escuro</button>
 
-.nav-link {
-  color: var(--laranja);
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0 1rem;
-}
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#hall-of-f1" class="nav-link">Hall da F1</a></li>
+        <li><a href="#galeria" class="nav-link">Galeria</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-/* Botão do tema */
-.tema-botao {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  background: var(--laranja);
-  color: #000;
-  font-weight: bold;
-}
+  <!-- Seções -->
+  <section id="inicio" class="inicio-fundo">
+    <h1 class="display-4">Bem-vindo ao Mundo da F1</h1>
+    <p>Velocidade, emoção e história em cada curva.</p>
+    <button class="botao-inicio">Saiba Mais</button>
+  </section>
+
+  <section id="hall-of-f1">
+    <h2>Hall da F1</h2>
+    <p>Grandes pilotos e momentos inesquecíveis da Fórmula 1.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <p>Imagens marcantes da Fórmula 1.</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form class="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" class="form-control" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" class="form-control" required>
+      
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" class="form-control" required></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Site Fórmula 1</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
