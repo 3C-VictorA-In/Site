@@ -1,3 +1,4 @@
+/* ====== TEMA PADRÃO ====== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
@@ -9,6 +10,7 @@
     --link-claro: #ffd700;
 }
 
+/* Base */
 body {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
@@ -17,6 +19,7 @@ body {
     margin: 0;
 }
 
+/* Estrutura */
 header,
 footer,
 .formulario {
@@ -28,6 +31,7 @@ section {
     padding-bottom: 5rem;
 }
 
+/* Navegação */
 .nav-link {
     color: var(--link-claro);
     font-weight: 600;
@@ -38,6 +42,7 @@ section {
     color: var(--laranja-claro);
 }
 
+/* Hero / Início */
 .inicio-fundo {  
     background-image: url('img/4965007.png');
     background-size: cover;
@@ -85,8 +90,8 @@ section {
     text-shadow: -5px 5px var(--laranja-claro);
 }
 
-
-#hall of f1 {
+/* Tropicalia */
+#tropicalia {
     position: relative;
     padding-top: 5rem;
     margin: 3rem 0;
@@ -108,6 +113,7 @@ h2 {
     color: var(--laranja-claro);
 }
 
+/* Galeria */
 #galeria {
     background-color: var(--fundo-escuro);
 }
@@ -116,8 +122,9 @@ h2 {
     background: none;
 }
 
+/* Contato */
 #contato {
-    background-image: url('img/4965007.png');
+    background-image: url('img/4965007.jpg');
     background-size: cover;
     background-position: center;
     padding: 4rem 0;
@@ -154,4 +161,55 @@ h2 {
     border-color: var(--laranja-claro);
     box-shadow: 0 0 8px rgba(255, 134, 42, 0.6);
     outline: none;
+}
+
+/* ====== TEMA ALTO CONTRASTE ====== */
+body.alto-contraste {
+    background-color: #000 !important;
+    color: #ff0 !important;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer,
+body.alto-contraste .formulario,
+body.alto-contraste section {
+    background-color: #000 !important;
+    color: #ff0 !important;
+}
+
+body.alto-contraste a,
+body.alto-contraste .nav-link {
+    color: #ff0 !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+body.alto-contraste .botao-inicio,
+body.alto-contraste .formulario button {
+    background-color: #ff0 !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
+}
+
+body.alto-contraste .botao-inicio:hover,
+body.alto-contraste .formulario button:hover {
+    background-color: #f00 !important;
+    color: #fff !important;
+}
+
+body.alto-contraste h2,
+body.alto-contraste .display-4 {
+    color: #ff0 !important;
+    text-shadow: none !important;
+}
+
+body.alto-contraste .form-control {
+    background-color: #000 !important;
+    color: #ff0 !important;
+    border: 2px solid #ff0 !important;
+}
+
+body.alto-contraste .form-control:focus {
+    border-color: #f00 !important;
+    box-shadow: 0 0 8px #f00 !important;
 }
