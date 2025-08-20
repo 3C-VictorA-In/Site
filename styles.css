@@ -1,5 +1,5 @@
-import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 /* Autor: Victor Alan 3C 13.08.2025 */
 :root {
@@ -11,9 +11,10 @@ import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 body {
     font-size: 1rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--fundo-escuro);
     color: var(--texto-claro);
+    margin: 0;
 }
 
 header,
@@ -30,6 +31,11 @@ section {
 .nav-link {
     color: var(--link-claro);
     font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--laranja-claro);
 }
 
 .inicio-fundo {  
@@ -67,17 +73,23 @@ section {
     align-content: center;
     color: var(--fundo-escuro);
     font-weight: bold;
+    transition: all 0.3s;
+}
+
+.botao-inicio:hover {
+    background-color: var(--laranja-claro);
+    color: var(--texto-claro);
 }
 
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
 }
 
-#tropicalia {
+
+#hall of f1 {
     position: relative;
     padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     background: none;
 }
 
@@ -90,7 +102,7 @@ section {
 }
 
 h2 {
-    font-family: 'Lemon', serif;
+    font-family: 'Lemon', cursive;
     font-size: 2.5em;
     font-style: normal;
     color: var(--laranja-claro);
@@ -107,6 +119,7 @@ h2 {
 #contato {
     background-image: url('img/4965007.jpg');
     background-size: cover;
+    background-position: center;
     padding: 4rem 0;
 }
 
@@ -122,11 +135,23 @@ h2 {
     border: none;
     font-weight: bold;
     color: var(--fundo-escuro);
+    transition: all 0.3s;
+}
+
+.formulario button:hover {
+    background-color: var(--laranja-claro);
+    color: var(--texto-claro);
 }
 
 .form-control {
     background-color: #222;
     color: var(--texto-claro);
+    border: 1px solid #444;
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
-
+.form-control:focus {
+    border-color: var(--laranja-claro);
+    box-shadow: 0 0 8px rgba(255, 134, 42, 0.6);
+    outline: none;
+}
