@@ -1,95 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site F1 - Acessibilidade</title>
+:root {
+  --fundo-claro: #ffffff;
+  --texto-escuro: #000000;
+  --fundo-escuro: #000000;
+  --texto-claro: #ffffff;
+  --laranja: #FF862A;
+  --link: #ffd700;
+}
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lemon&display=swap" rel="stylesheet">
+body {
+  background-color: var(--fundo-claro);
+  color: var(--texto-escuro);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+/* Tema escuro */
+body.tema-escuro {
+  background-color: var(--fundo-escuro);
+  color: var(--texto-claro);
+}
 
-    <!-- ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio" class="nav-link">Início</a></li>
-                <li><a href="#hall-of-f1" class="nav-link">Hall da F1</a></li>
-                <li><a href="#galeria" class="nav-link">Galeria</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+header, footer {
+  padding: 1rem;
+  text-align: center;
+}
 
-    <!-- Botão de acessibilidade -->
-    <div class="acessibilidade">
-        <button id="botao-acessibilidade" aria-expanded="false">♿</button>
-        <div id="opcoes-acessibilidade" class="lista-acessibilidade">
-            <button id="aumentar-fonte">A+</button>
-            <button id="diminuir-fonte">A-</button>
-            <button id="alterna-contraste">Contraste</button>
-        </div>
-    </div>
+.nav-link {
+  color: var(--laranja);
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 1rem;
+}
 
-    <!-- Seção Início -->
-    <section id="inicio" class="inicio-fundo">
-        <div class="esquerda-conteudo">
-            <h1 class="display-4">Bem-vindo ao Mundo da F1</h1>
-            <p>Velocidade, emoção e história em cada curva.</p>
-            <button class="botao-inicio">Saiba Mais</button>
-        </div>
-    </section>
-
-    <!-- Seção Hall of F1 -->
-    <section id="hall-of-f1">
-        <div class="container">
-            <h2>Hall da F1</h2>
-            <p>Grandes pilotos e momentos inesquecíveis da Fórmula 1.</p>
-        </div>
-    </section>
-
-    <!-- Seção Galeria -->
-    <section id="galeria">
-        <h2>Galeria</h2>
-        <div class="fundo-galeria">
-            <p>Imagens marcantes da Fórmula 1.</p>
-        </div>
-    </section>
-
-    <!-- Seção Contato -->
-    <section id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            <form class="formulario">
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" class="form-control" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" class="form-control" required>
-                </div>
-                <div>
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" class="form-control" required></textarea>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 - Site Fórmula 1 com Acessibilidade</p>
-    </footer>
-
-    <!-- Script -->
-    <script src="script.js"></script>
-</body>
-</html>
+/* Botão do tema */
+.tema-botao {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: var(--laranja);
+  color: #000;
+  font-weight: bold;
+}
